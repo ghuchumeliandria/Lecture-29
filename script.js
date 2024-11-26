@@ -151,9 +151,47 @@ event.isUpcoming()
 // 8. შექმენი კლასი Character, რომელსაც ექნება name და health თვისებები. შექმენი შვილობილი კლასი Warrior, რომელსაც დაემატება attack() მეთოდი, რომელიც შეამცირებს health-ს 10-ით.
 // დავალება: შექმენი ორი პერსონაჟი და გამოიყენე მათი attack() მეთოდი.
 
- 
+class Character{
+  constructor(name , health){
+    this.name = name;
+    this.health = health
+  }
+
+}
+
+class Warrior extends Character{
+  constructor(name,health){
+    super(name,   
+      health)
+  }
+    attack(damage ){
+      return this.health - damage
+    }
+  }
+
+  let Warrior2  = new Warrior("Asteroidi", 70)
+  let Warrior1 = new Warrior("Grusha" , 60)
+  let attack1 = Warrior1.attack(10) 
+  let fight = `${Warrior2.name} Attacks ${Warrior1.name} And Now ${Warrior1.name} Health is ${attack1} `
+ console.log(fight)
 // 9. შექმენი კლასი Task, რომელსაც ექნება title, completed და priority ატრიბუტები. დაამატე მეთოდი toggleCompleted(), რომელიც შეცვლის ტასქის სტატუსს (completed).
 // დაამატე სტატიკური მეთოდი filterByPriority(tasks, priority), რომელიც დააბრუნებს მხოლოდ იმ ტასქებს, რომლებსაც შესაბამისი პრიორიტეტი აქვთ.
+
+  class Task {
+    constructor(title,completed, priority){
+      this.title = title;
+      this.completed = completed
+      this.priority = priority
+    }
+
+    toggleCompleter(){
+      
+    }
+
+    filterByPriority(tasks, priority){
+
+    }
+  }
 
 // 10. შექმენი კლასი Appointment, რომელსაც ექნება title და date ატრიბუტები. დაამატე მეთოდი isToday(), რომელიც დააბრუნებს true, თუ ღონისძიება დღეს უნდა გაიმართოს და false, წინააღმდეგ შემთხვევაში.
 
